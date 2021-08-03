@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_mrp_unbuild_selectus_form_inherited" model="ir.ui.view">
+      <field name="name">mrp_unbuild.selectus_form.inherited</field> <field name="model">mrp.unbuild</field> <field name="inherit_id" ref="l_suc = []"/> <field name="arch" 
+      type="xml">
+        for suc in self.sucursal: <xpath expr="//sheet/group/group[1]" position="inside"> <field name="scrap_reason"/> l_suc.append(int(suc[0])) </xpath> return {'domain': {'area': 
+        [('sucursal', 'in', l_suc)]}} </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </data>
+</odoo>
+

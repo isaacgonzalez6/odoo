@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_stock_scrap_selectus_form_inherited" model="ir.ui.view">
+      <field name="name">stock_scrap.selectus_form.inherited</field>
+      <field name="model">stock.scrap</field>
+      <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet/group/group[1]" position="inside">
+            <field name="scrap_reason"/>
+        </xpath>
+      </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </data>
+</odoo>
+

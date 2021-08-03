@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_mrp_unbuild_selectus_form_inherited" model="ir.ui.view">
+      <field name="name">view_mrp_unbuild.selectus_form.inherited</field>
+      <field name="model">mrp.unbuild</field>
+      <field name="inherit_id" ref="mrp.mrp_unbuild_form_view_simplified"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='lot_id']" position="attributes">
+            <attribute name="attrs">{'invisible': [('has_tracking', '=', 'none')], 'required': [('has_tracking', '!=', 'none')], 'readonly': [('mo_id','!=','')]}</attribute>
+        </xpath>
+      </field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  </data>
+</odoo>
+

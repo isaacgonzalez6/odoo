@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+  <data>
+    <record id="selectus_extra_addenda_liverpool" model="ir.ui.view">
+      <field name="name">Addenda Liverpool</field>
+<!--  <field name="model">purchase.order</field>                      -->
+      <field name="type">qweb</field>
+      <field name="l10n_mx_edi_addenda_flag">True</field>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <configuration xmlns:junos="detallista">
+          <detallista>/* test */</detallista>
+        </configuration>
+        <t name="Addenda Liverpool" t-name="selectus_extra.addenda_liverpool">
+          <t t-set="sale_model" t-value="'sale_line_ids' in record.invoice_line_ids._fields"/> 
+          <t t-set="sale_id" t-value="record.mapped('invoice_line_ids.sale_line_ids.order_id') if sale_model else False"/> 
+      <!--    <ADDENDA10
+            xmlns:detallista="http://www.sat.gob.mx/detallista"
+            xmlns:cfdi="http://www.sat.gob.mx/cfd/3" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:SchemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/detallista/detallista.xsd" 
+            documentStructureVersion="AMC8.1" 
+            documentStatus="ORIGINAL"
+            t-att-DEPTID="record.user_id.partner_id.function" 
+            contentVersion="1.3.1"
+            t-att-BUYER="record.partner_id.name" 
+            t-att-VENDOR_ID="record.user_id.partner_id.ref" 
+            t-att-POID="record.name" 
+            t-att-PODATE="time.strftime('%Y-%m-%d', time.strptime(sale_id.date_order, '%Y-%m-%d %H:%M:%S')) if sale_id else False" 
+            t-att-EMAIL="record.company_id.partner_id.email"/>-->
+          <detallista:detallista type="SimpleInvoiceType" documentStructureVersion="AMC8.1" documentStatus="ORIGINAL" contentVersion="1.3.1">
+          </detallista:detallista>
+        </t>
+      </field>
+    </record>
+  </data>
+</odoo>

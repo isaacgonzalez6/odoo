@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_res_partner_selectus_form_inherited" model="ir.ui.view">
+      <field name="name">res_partner.selectus_form.inherited</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='vat']" position="attributes">
+          <attribute name="string">RFC</attribute>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="view_res_partner_selectus_tree_inherited" model="ir.ui.view">
+      <field name="name">res_partner.selectus_tree.inherited</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_tree"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='vat']" position="attributes">
+          <attribute name="string">RFC</attribute>
+        </xpath>
+      </field>
+    </record>
+  
+  </data>
+</odoo>
+
